@@ -7,6 +7,9 @@
     sync_list: []
     sync_apply_fail: false
 
+- debug:
+    msg: " {{ ptf_group_info.file_path | basename }} "
+
 - name: Compose target tmp dir str
   set_fact:
     path: "{{ dest }}/{{ ptf_group_info.file_path | basename }}"

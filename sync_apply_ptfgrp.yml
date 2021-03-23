@@ -1,0 +1,15 @@
+- name: Example of sync_apply_ptf_group role
+  hosts: 10.7.19.72 
+  #gather_facts: True
+  vars:
+    src_host: 10.7.19.71
+    dest: '/ansible/image'
+    ptf_group_info:
+      file_path: '/fixes'
+      file_name: ['S9722V01.BIN']
+
+  tasks:
+    - name: Include sync_apply_ptf_group role to transfer PTF group files to target ibm i, and apply
+      include_role:
+        name: sync_apply_ptf_group
+

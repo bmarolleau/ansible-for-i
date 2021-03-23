@@ -1,0 +1,12 @@
+- name: Example of sync_apply_ptf_group role
+  hosts: ibmi 
+
+  vars:
+    ptf_group_info: "{ 'file_path': '/fixes', 'file_name': ['S9722V01.BIN'] }"
+    src_host: "{{ src_host }}"
+
+  tasks:
+    - name: Include sync_apply_ptf_group role to transfer PTF group files to target ibm i, and apply
+      include_role:
+        name: sync_apply_ptf_group
+

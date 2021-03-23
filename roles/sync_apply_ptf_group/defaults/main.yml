@@ -1,3 +1,10 @@
 ---
 # defaults value for sync_apply_ptf_group
 dest: "/ansible/image"
+ptf_group_info: 
+  file_path: '/fixes'
+  file_name: ['S9722V01.BIN'] 
+foo:
+  field1: one
+  field2: two
+src_host: 10.7.19.71

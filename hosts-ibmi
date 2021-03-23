@@ -1,0 +1,7 @@
+[ibmi]
+10.7.19.71 ansible_ssh_user=benoit
+10.7.19.72 ansible_ssh_user=benoit	
+
+[ibmi:vars]
+ansible_python_interpreter="/QOpensys/pkgs/bin/python3"
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
